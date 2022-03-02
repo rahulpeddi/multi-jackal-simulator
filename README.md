@@ -2,6 +2,13 @@
 
 This package is a port of Nick Sullivan's multi-jackal simulator for Ubuntu 16. The ROS documentation can be found [here](http://wiki.ros.org/multi_jackal_tutorials).
 
+# Installation Instructions
+
+_This package is designed for Ubuntu 20/ ROS Noetic. Make sure your system is running Ubuntu 20 and that ROS is installed: http://wiki.ros.org/noetic/Installation/Ubuntu_
+
+*create a workspace for your packages
+
+
 
 # Overview
 These packages make use of the robotic simulator Gazebo, along with the Jackal 
