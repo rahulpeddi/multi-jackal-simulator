@@ -1,6 +1,6 @@
 # Multi-Jackal Simulator using Gazebo ROS in Ubuntu 20/ROS Noetic
 
-# This package is a port of Nick Sullivan's multi-jackal simulator for Ubuntu 16. The ROS documentation can be found [here](http://wiki.ros.org/multi_jackal_tutorials).
+This package is a port of Nick Sullivan's multi-jackal simulator for Ubuntu 16. The ROS documentation can be found [here](http://wiki.ros.org/multi_jackal_tutorials).
 
 
 # Overview
