@@ -4,9 +4,15 @@ This package is a port of Nick Sullivan's multi-jackal simulator for Ubuntu 16. 
 
 # Installation Instructions
 
-_This package is designed for Ubuntu 20/ ROS Noetic. Make sure your system is running Ubuntu 20 and that ROS is installed: http://wiki.ros.org/noetic/Installation/Ubuntu_
+_This package is designed for Ubuntu 20/ROS Noetic. Make sure your system is running Ubuntu 20 and that ROS is installed: http://wiki.ros.org/noetic/Installation/Ubuntu_
 
-*create a workspace for your packages
+- create a catkin workspace for your packages
+```
+mkdir -p ~/jackal_ws/src
+cd ~/jackal_ws/
+catkin_make
+```
+- install all the base jackal noetic packages from clearpath
 
 
 
