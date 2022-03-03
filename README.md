@@ -4,7 +4,7 @@ This package is a port of Nick Sullivan's multi-jackal simulator for Ubuntu 16. 
 
 # Installation Instructions
 
-_This package is designed for Ubuntu 20/ROS Noetic. Make sure your system is running Ubuntu 20 and that ROS is installed: http://wiki.ros.org/noetic/Installation/Ubuntu_
+_This package is designed for Ubuntu 20/ROS Noetic. Make sure your system is running Ubuntu 20 and that ROS is installed: http://wiki.ros.org/noetic/Installation/Ubuntu_ (install the full desktop version: ros-noetic-desktop-full)
 
 - create a catkin workspace for your packages
 ```
@@ -12,8 +12,23 @@ mkdir -p ~/jackal_ws/src
 cd ~/jackal_ws/
 catkin_make
 ```
-- install all the base jackal noetic packages from clearpath
-
+- install and compile all the base jackal noetic packages from clearpath: these are necessary
+```
+cd src
+git clone https://github.com/jackal/jackal.git
+git clone https://github.com/jackal/jackal_simulator.git
+git clone https://github.com/jackal/jackal_desktop.git
+git clone https://github.com/ros-visualization/interactive_marker_twist_server.git
+cd jackal_ws; rosdep install --from-paths . --ignore-src --rosdistro=noetic
+catkin_make
+```
+- install and compile this simulator in jackal_ws/src:
+```
+git clone https://github.com/rahulpeddi/multi-jackal-simulator
+cd jackal_ws; rosdep install --from-paths . --ignore-src
+catkin_make
+```
+You are ready to run!
 
 
 # Overview
@@ -32,7 +47,7 @@ look at the topics and TF tree.
 
 # Files
 ## multi_jackal_tutorials
-The starting point for simulating the robots. Contains launch and config files.
+The starting point for simulating the robots. Contains launch, config, and world files.
 Starts up a Gazebo session and launches robots using `multi_jackal_base`.
 Example: `roslaunch multi_jackal_tutorials one_jackal.launch`.
 
@@ -52,7 +67,7 @@ Creates the localization and move_base nodes.
 # Running
 Make sure the file `multi_jackal_description/scripts/env_run` is executable.
 
-Example launch files can be found in `multi_jackal_tutorials/launch`. Gazebo can be viewed with `gzclient`.
+Example launch files can be found in `multi_jackal_tutorials/launch`. Gazebo can be viewed with `gzclient` in another terminal.
 
-NOTE: rviz folder and config are included but Noetic's TF handling has changed
+NOTE: rviz folder and config are included but Noetic's TF handling has been completely reworked, one robot can be visualized but multiple is not yet implemented
 TODO: fix TF tree and rviz
