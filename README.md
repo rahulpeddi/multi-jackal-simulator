@@ -6,13 +6,13 @@ This package is a port of Nick Sullivan's multi-jackal simulator for Ubuntu 16. 
 
 _This package is designed for Ubuntu 20/ROS Noetic. Make sure your system is running Ubuntu 20 and that ROS is installed: http://wiki.ros.org/noetic/Installation/Ubuntu_ (install the full desktop version: ros-noetic-desktop-full)
 
-- create a catkin workspace for your packages
+- Create a catkin workspace for your packages
 ```
 mkdir -p ~/jackal_ws/src
 cd ~/jackal_ws/
 catkin_make
 ```
-- install and compile all the base jackal noetic packages from clearpath: these are necessary
+- Install and compile all the base jackal noetic packages from clearpath: these are necessary
 ```
 cd src
 git clone https://github.com/jackal/jackal.git
@@ -22,8 +22,9 @@ git clone https://github.com/ros-visualization/interactive_marker_twist_server.g
 cd jackal_ws; rosdep install --from-paths . --ignore-src --rosdistro=noetic
 catkin_make
 ```
-- install and compile this simulator in jackal_ws/src:
+- Install and compile this simulator in jackal_ws/src:
 ```
+cd jackal_ws/src
 git clone https://github.com/rahulpeddi/multi-jackal-simulator
 cd jackal_ws; rosdep install --from-paths . --ignore-src
 catkin_make
