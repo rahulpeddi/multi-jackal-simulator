@@ -19,7 +19,8 @@ git clone https://github.com/jackal/jackal.git
 git clone https://github.com/jackal/jackal_simulator.git
 git clone https://github.com/jackal/jackal_desktop.git
 git clone https://github.com/ros-visualization/interactive_marker_twist_server.git
-cd jackal_ws; rosdep install --from-paths . --ignore-src --rosdistro=noetic
+cd jackal_ws
+rosdep install --from-paths . --ignore-src --rosdistro=noetic
 catkin_make
 ```
 - Install and compile this simulator in jackal_ws/src:
