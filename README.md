@@ -27,7 +27,7 @@ catkin_make
 ```
 cd src
 git clone https://github.com/rahulpeddi/multi-jackal-simulator
-cd ~/jackal_ws;
+cd ~/jackal_ws
 rosdep install --from-paths . --ignore-src
 catkin_make
 ```
