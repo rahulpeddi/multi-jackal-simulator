@@ -19,7 +19,7 @@ git clone https://github.com/jackal/jackal.git
 git clone https://github.com/jackal/jackal_simulator.git
 git clone https://github.com/jackal/jackal_desktop.git
 git clone https://github.com/ros-visualization/interactive_marker_twist_server.git
-cd jackal_ws
+cd ~/jackal_ws
 rosdep install --from-paths . --ignore-src --rosdistro=noetic
 catkin_make
 ```
@@ -27,7 +27,8 @@ catkin_make
 ```
 cd src
 git clone https://github.com/rahulpeddi/multi-jackal-simulator
-cd jackal_ws; rosdep install --from-paths . --ignore-src
+cd ~/jackal_ws;
+rosdep install --from-paths . --ignore-src
 catkin_make
 ```
 You are ready to run!
