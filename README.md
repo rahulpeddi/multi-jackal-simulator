@@ -33,7 +33,7 @@ catkin_make
 ```
 You are ready to run!
 
-If you'd like to use move_base, install the following ROS packages (optional):
+If you'd like to use move_base (optional), install the following ROS packages:
 ```
 sudo apt-get install ros-noetic-geometry2
 sudo apt-get install ros-noetic-navigation
