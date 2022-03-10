@@ -33,6 +33,11 @@ catkin_make
 ```
 You are ready to run!
 
+If you'd like to use move_base, install the following ROS packages (optional):
+```
+sudo apt-get install ros-noetic-geometry2
+sudo apt-get install ros-noetic-navigation
+```
 
 # Overview
 These packages make use of the robotic simulator Gazebo, along with the Jackal 
