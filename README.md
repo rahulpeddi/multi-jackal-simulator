@@ -12,7 +12,7 @@ mkdir -p ~/jackal_ws/src
 cd ~/jackal_ws/
 catkin_make
 ```
-- Install and compile all the base jackal noetic packages from clearpath: these are necessary
+- Install and compile all the required base jackal noetic packages from clearpath:
 ```
 cd src
 git clone https://github.com/jackal/jackal.git
